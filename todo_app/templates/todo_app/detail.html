@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="text-light bg-dark row">
+    {% comment %} <div class="p-3 mb-2 bg-secondary text-white">.bg-secondary</div> {% endcomment %}
+    <div class="col">
+
+        <div class="h2 text-center my-3">
+            <a href="{% url 'todo_app:upgrade' pk=task.pk %}">{{ task.title }}</a></div>
+        <div class="py-2">{{ task.body }}</div>
+        <div class="text-primary py-1">{{ task.created }}</div>
+
+    </div>
+</div>
+{% endblock %}

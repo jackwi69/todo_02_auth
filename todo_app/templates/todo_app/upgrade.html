@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="text-light bg-dark row">
+    {% comment %} <div class="p-3 mb-2 bg-secondary text-white">.bg-secondary</div> {% endcomment %}
+    <div class="col">
+
+        <form method='POST'>
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input class="btn btn-info" type="submit" name="Upgrade Task">
+        </form>
+
+
+    </div>
+</div>
+
+
+{% endblock %}
